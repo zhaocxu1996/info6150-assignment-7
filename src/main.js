@@ -36,8 +36,8 @@ let submitBtn = createInput(3, div3, 'submit');
 let s1 = 'https://api.worldtradingdata.com/api/v1/stock?symbol=';
 let query;
 let token = '&api_token=demo';
-submitBtn.addEventListener('click', function(){
-    // div4.removeChild(document.getElementsByTagName('table'));
+let Rx = require('rx');
+Rx.Observable.fromEvent(submitBtn, 'click').subscribe(()=>{
     if (div4.hasChildNodes) {
         while(div4.firstChild) {
             div4.removeChild(div4.firstChild);
@@ -83,3 +83,50 @@ submitBtn.addEventListener('click', function(){
     xhr.open('GET', query);
     xhr.send();
 })
+// submitBtn.addEventListener('click', function(){
+//     // div4.removeChild(document.getElementsByTagName('table'));
+//     if (div4.hasChildNodes) {
+//         while(div4.firstChild) {
+//             div4.removeChild(div4.firstChild);
+//         }
+//     }
+//     query = s1+inputText.value+token;
+//     let xhr = new XMLHttpRequest();
+//     xhr.addEventListener('load', function(){
+//         let response = JSON.parse(this.responseText);
+//         let data = response.data;
+//         if (data == undefined) {
+//             let span = document.createElement('span');
+//             span.innerHTML = 'Data do not exist!'
+//             div4.appendChild(span);
+//         } else {
+//             let col = [];
+//             for (let i = 0; i < data.length; i++) {
+//                 for (let key in data[i]) {
+//                     if (col.indexOf(key) === -1) {
+//                         col.push(key);
+//                     }
+//                 }
+//             }
+    
+//             let table = document.createElement('table');
+//             let tr = table.insertRow(-1);
+//             for (let i = 0; i < col.length; i++) {
+//                 let th = document.createElement('th');
+//                 th.innerHTML = col[i];
+//                 tr.appendChild(th);
+//             }
+    
+//             for (let i = 0; i < data.length; i++) {
+//                 tr = table.insertRow(-1);
+//                 for (let j = 0; j < col.length; j++) {
+//                     let tableCell = tr.insertCell(-1);
+//                     tableCell.innerHTML = data[i][col[j]];
+//                 }
+//             }
+//             div4.appendChild(table);
+//         }
+//     })
+//     xhr.open('GET', query);
+//     xhr.send();
+// })
