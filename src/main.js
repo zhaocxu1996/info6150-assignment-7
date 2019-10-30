@@ -1,5 +1,4 @@
 import './../scss/main.scss';
-import { Observable } from 'rxjs/Observable';
 let body = document.getElementsByTagName('body').item(0);
 
 let createDiv = (value, parent, content) => {
@@ -38,7 +37,8 @@ let submitBtn = createInput(3, div3, 'submit');
 let s1 = 'https://api.worldtradingdata.com/api/v1/stock?symbol=';
 let query;
 let token = '&api_token=demo';
-Observable.fromEvent(submitBtn, 'click').subscribe(()=>{
+let Rx = require('rxjs/Rx');
+Rx.Observable.fromEvent(submitBtn, 'click').subscribe(()=>{
     if (div4.hasChildNodes) {
         while(div4.firstChild) {
             div4.removeChild(div4.firstChild);
