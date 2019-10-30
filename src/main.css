@@ -1,0 +1,19 @@
+.container {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* text-align: left; */
+    padding: 10px;
+    /* cursor: pointer; */
+}
+
+.container-1 {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.input-2 {
+    width: 500px;
+}
+
+.container-4 {
+    height: 400px;
+}
