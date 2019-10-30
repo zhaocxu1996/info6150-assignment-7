@@ -1,27 +1,44 @@
 {
-  "name": "assignment-7-zhaocxu1996",
+  "name": "scss-webpack-template",
   "version": "1.0.0",
-  "description": "assignment 7",
-  "main": "index.html",
+  "description": "SCSS Webpack template project",
+  "private": true,
+  "main": "main.js",
   "scripts": {
-    "test": "npm test"
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neu-mis-info6150-fall-2019/assignment-7-zhaocxu1996.git"
+    "url": "git+https://github.com/amuthanarulraj/scss-webpack-template.git"
   },
   "keywords": [
-    "assignment-7"
+    "SCSS",
+    "Webpack",
+    "Template"
   ],
-  "author": "zhaocxu",
-  "license": "ISC",
+  "author": "Amuthan Arulraj",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/neu-mis-info6150-fall-2019/assignment-7-zhaocxu1996/issues"
+    "url": "https://github.com/amuthanarulraj/scss-webpack-template/issues"
   },
-  "homepage": "https://github.com/neu-mis-info6150-fall-2019/assignment-7-zhaocxu1996#readme",
+  "homepage": "https://github.com/amuthanarulraj/scss-webpack-template#readme",
   "devDependencies": {
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "clean-webpack-plugin": "1.0.1",
+    "css-loader": "2.1.0",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "3.2.0",
+    "mini-css-extract-plugin": "0.5.0",
+    "node-sass": "4.12.0",
+    "sass-loader": "7.1.0",
+    "webpack": "4.29.0",
+    "webpack-cli": "3.2.1",
+    "webpack-dev-server": "3.1.14"
+  },
+  "dependencies": {
+    "html-loader": "^0.5.5",
+    "rxjs": "^6.5.3",
+    "rxjs-compat": "^6.5.3"
   }
 }
